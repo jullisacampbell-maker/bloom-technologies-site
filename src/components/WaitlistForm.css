@@ -1,0 +1,96 @@
+.waitlist__card {
+  background: var(--color-cream-50);
+  border: 1px solid var(--color-forest-100);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.waitlist__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+.waitlist__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.waitlist__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.waitlist__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.waitlist__input,
+.waitlist__textarea {
+  padding: 0.875rem 1rem;
+  border: 1.5px solid var(--color-cream-300);
+  border-radius: var(--radius-md);
+  background: var(--color-cream-100);
+  color: var(--color-text-primary);
+  transition: all var(--transition-fast);
+}
+
+.waitlist__input:focus,
+.waitlist__textarea:focus {
+  outline: none;
+  border-color: var(--color-forest-400);
+  background: var(--color-cream-50);
+  box-shadow: 0 0 0 3px rgba(45, 90, 61, 0.08);
+}
+
+.waitlist__textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.waitlist__submit {
+  margin-top: var(--space-md);
+  width: 100%;
+}
+
+/* Success state */
+.waitlist__card--success {
+  text-align: center;
+  padding: var(--space-4xl) var(--space-3xl);
+}
+
+.waitlist__success-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-lg);
+}
+
+.waitlist__success-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--color-forest-900);
+  margin-bottom: var(--space-md);
+}
+
+.waitlist__success-text {
+  font-size: 1.0625rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .waitlist__row {
+    grid-template-columns: 1fr;
+  }
+
+  .waitlist__card {
+    padding: var(--space-2xl);
+  }
+}
