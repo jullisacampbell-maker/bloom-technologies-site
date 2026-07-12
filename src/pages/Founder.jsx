@@ -25,34 +25,43 @@ export default function Founder() {
             <div className="founder-page__bio">
               <SectionTitle
                 label="Founder Story"
-                title="From healthcare technology to family technology"
+                title="My Story"
                 align="left"
               />
 
               <div className="founder-page__story">
                 <p>
-                  Jullisa Campbell spent years in healthcare SaaS — implementing
-                  complex technology systems for large organizations and guiding
-                  teams through digital transformation. It was meaningful work,
-                  but something was missing.
+                  I didn&apos;t start Bloom because I had a brilliant business idea.
                 </p>
                 <p>
-                  While helping enterprises navigate technology, she noticed that
-                  families — the most important organizations of all — were left
-                  behind. The software available to parents was fragmented,
-                  overwhelming, or simply not designed with family life in mind.
+                  I started Bloom because I was overwhelmed.
                 </p>
                 <p>
-                  She saw parents drowning in mental load, juggling apps that
-                  didn&apos;t talk to each other, and spending more time managing
-                  tools than enjoying time with their children. The same level of
-                  care she brought to healthcare implementations, families deserved
-                  in their daily lives.
+                  After years building software in healthcare technology, I came home
+                  every day to a completely different kind of challenge—running a family.
                 </p>
                 <p>
-                  Bloom Technologies was born from that realization — a company
-                  dedicated to building thoughtful AI-powered software that helps
-                  families organize, learn, and flourish together.
+                  I was managing meals, homeschool lessons, doctor&apos;s appointments,
+                  household chores, grocery lists, routines, finances, activities,
+                  birthdays, and a thousand tiny details that somehow always lived in my head.
+                </p>
+                <p>
+                  There wasn&apos;t one place that helped me manage it all.
+                </p>
+                <p>
+                  I wasn&apos;t looking for another calendar.
+                </p>
+                <p>
+                  I wasn&apos;t looking for another to-do list.
+                </p>
+                <p>
+                  I was looking for something that actually understood how families work.
+                </p>
+                <p>
+                  Nothing existed.
+                </p>
+                <p>
+                  So I decided to build it.
                 </p>
               </div>
             </div>
@@ -63,26 +72,138 @@ export default function Founder() {
       <section className="section section--cream">
         <div className="container container--narrow">
           <SectionTitle
-            label="Philosophy"
-            title="Building technology around real family life"
+            title="Bloom Began With My Own Family"
           />
-          <div className="founder-page__philosophy">
+          <div className="founder-page__story">
             <p>
-              Bloom isn&apos;t just a company — it&apos;s a belief that families
-              deserve better. Better tools, better design, better technology that
-              understands the rhythms of home life.
+              I&apos;m a wife.
             </p>
             <p>
-              Every product we build starts with listening: to parents, to
-              educators, to children. We design for the messy, beautiful,
-              unpredictable reality of family life — not the sterile version
-              software companies usually imagine.
+              I&apos;m a mom.
             </p>
             <p>
-              Our mission is simple: reduce the invisible load, so families can
-              focus on what matters most.
+              I&apos;m a homeschool teacher.
+            </p>
+            <p>
+              I&apos;m someone who understands what it feels like to carry the invisible
+              mental load that so many parents experience every day.
+            </p>
+            <p>
+              Bloom wasn&apos;t designed in a boardroom.
+            </p>
+            <p>
+              It was designed at my kitchen table.
+            </p>
+            <p>
+              Between homeschooling lessons.
+            </p>
+            <p>
+              Between making dinner.
+            </p>
+            <p>
+              Between bedtime routines.
+            </p>
+            <p>
+              Between trying to remember one more thing that couldn&apos;t be forgotten.
+            </p>
+            <p>
+              Every feature begins with a real problem I&apos;ve experienced—or one another
+              family has shared with me.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container container--narrow">
+          <SectionTitle
+            title="Why Bloom Technologies Exists"
+          />
+          <div className="founder-page__story">
+            <p>
+              I believe technology should make family life simpler—not more complicated.
+            </p>
+            <p>
+              It should reduce stress.
+            </p>
+            <p>
+              Create clarity.
+            </p>
+            <p>
+              Give parents more confidence.
+            </p>
+            <p>
+              Help children thrive.
+            </p>
+            <p>
+              And give families back something that&apos;s becoming increasingly rare:
+            </p>
+            <p>
+              Time together.
+            </p>
+            <p>
+              That&apos;s why I created Bloom Technologies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--cream">
+        <div className="container container--narrow">
+          <SectionTitle
+            title="We're Building This Together"
+          />
+          <div className="founder-page__story">
+            <p>
+              Bloom isn&apos;t just software.
+            </p>
+            <p>
+              It&apos;s a long-term mission to build thoughtful technology for modern families.
+            </p>
+            <p>
+              Bloom HQ helps organize home life.
+            </p>
+            <p>
+              Bloom Academy helps personalize homeschooling.
+            </p>
+            <p>
+              Bloom Buds creates interactive learning experiences for children.
+            </p>
+            <p>
+              And this is only the beginning.
+            </p>
+            <p>
+              If you&apos;re here before launch, you&apos;re helping shape everything that comes next.
+            </p>
+            <p>
+              You&apos;re not just joining a waitlist.
+            </p>
+            <p>
+              You&apos;re becoming part of the story.
+            </p>
+            <p>
+              Welcome to Bloom.
+            </p>
+          </div>
+
+          <div className="founder-page__signature">
+            <p>— Jullisa Campbell</p>
+            <p>Founder &amp; CEO</p>
+            <p>Bloom Technologies</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="founder-page__quote section">
+        <div className="container container--narrow">
+          <blockquote className="founder-page__quote-block">
+            <p>
+              I wasn&apos;t building software for someone else.
+              <br />
+              I was building the technology I desperately needed.
+            </p>
+            <footer>— Jullisa Campbell</footer>
+          </blockquote>
         </div>
       </section>
     </div>
