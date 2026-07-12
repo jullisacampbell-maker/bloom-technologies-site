@@ -1,0 +1,46 @@
+.mission__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.mission__card {
+  background: var(--color-cream-50);
+  border: 1px solid var(--color-forest-100);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.mission__card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.mission__card-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-lg);
+}
+
+.mission__card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--color-forest-900);
+  margin-bottom: var(--space-md);
+}
+
+.mission__card-text {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 968px) {
+  .mission__content {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}

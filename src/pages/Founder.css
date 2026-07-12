@@ -1,0 +1,97 @@
+.founder-page__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-4xl);
+  align-items: start;
+}
+
+.founder-page__portrait-placeholder {
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(160deg, var(--color-cream-200) 0%, var(--color-forest-50) 100%);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-forest-100);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  max-width: 400px;
+}
+
+.founder-page__portrait-placeholder span {
+  font-size: 5rem;
+  opacity: 0.3;
+}
+
+.founder-page__portrait-placeholder p {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.founder-page__story {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.founder-page__story p {
+  font-size: 1.0625rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.founder-page__signature {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-2xl);
+  border-top: 1px solid var(--color-forest-100);
+}
+
+.founder-page__signature p {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.founder-page__signature p:first-child {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.founder-page__quote-block {
+  text-align: center;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.founder-page__quote-block p {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 400;
+  color: var(--color-forest-900);
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-xl);
+}
+
+.founder-page__quote-block footer {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  font-style: normal;
+}
+
+@media (max-width: 968px) {
+  .founder-page__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-page__portrait {
+    display: flex;
+    justify-content: center;
+  }
+
+  .founder-page__portrait-placeholder {
+    max-width: 300px;
+  }
+}
