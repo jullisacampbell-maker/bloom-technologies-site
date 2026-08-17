@@ -1,0 +1,37 @@
+.reset-demo__trigger {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.reset-demo__trigger:hover {
+  color: #b5453a;
+}
+
+.reset-demo--confirm {
+  background: white;
+  border: 1.5px solid var(--color-cream-300);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-md);
+}
+
+.reset-demo--confirm p {
+  font-size: 0.875rem;
+  margin-bottom: var(--space-md);
+}
+
+.reset-demo__actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.reset-demo__confirm {
+  background: #b5453a;
+  color: white;
+}
+
+.reset-demo__confirm:hover {
+  background: #9a3a31;
+}

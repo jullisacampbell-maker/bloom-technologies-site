@@ -1,0 +1,61 @@
+.weekly-record {
+  background: white;
+  border: 1px solid var(--color-cream-300);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.weekly-record--empty p {
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+.weekly-record__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.weekly-record__header h3 {
+  font-size: 1rem;
+  color: var(--color-forest-800);
+}
+
+.weekly-record__totals {
+  display: flex;
+  gap: var(--space-md);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.weekly-record__table-wrap {
+  overflow-x: auto;
+}
+
+.weekly-record__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.weekly-record__table th,
+.weekly-record__table td {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  border-bottom: 1px solid var(--color-cream-200);
+}
+
+.weekly-record__table th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.weekly-record__status--complete { color: var(--color-forest-700); }
+.weekly-record__status--skip { color: var(--color-text-muted); }
+.weekly-record__status--move { color: var(--color-gold-700); }

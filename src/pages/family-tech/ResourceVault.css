@@ -1,0 +1,197 @@
+.resource-vault {
+  padding: calc(var(--nav-height) + var(--space-xl)) 0 var(--space-4xl);
+  min-height: 100vh;
+}
+
+.resource-vault__back {
+  font-size: 0.9375rem;
+  color: var(--color-forest-700);
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: var(--space-lg);
+}
+
+.resource-vault__header {
+  margin-bottom: var(--space-2xl);
+}
+
+.resource-vault__header h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-forest-800);
+  margin-bottom: var(--space-sm);
+}
+
+.resource-vault__tagline {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  max-width: 36rem;
+  line-height: 1.6;
+}
+
+.resource-vault__verified {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-sm);
+}
+
+.resource-vault__toolbar {
+  margin-bottom: var(--space-xl);
+}
+
+.resource-vault__search {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-cream-300);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  margin-bottom: var(--space-md);
+}
+
+.resource-vault__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.resource-vault__filter {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--color-cream-300);
+  border-radius: var(--radius-full);
+  background: white;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+}
+
+.resource-vault__filter--active {
+  background: var(--color-forest-700);
+  color: white;
+  border-color: var(--color-forest-700);
+}
+
+.resource-vault__count {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.resource-vault__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.resource-vault__card {
+  background: white;
+  border: 1px solid var(--color-cream-300);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.resource-vault__card-top {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.resource-vault__format,
+.resource-vault__level {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-forest-50);
+  color: var(--color-forest-700);
+}
+
+.resource-vault__title {
+  font-size: 1.0625rem;
+  color: var(--color-forest-800);
+  margin-bottom: var(--space-xs);
+  line-height: 1.35;
+}
+
+.resource-vault__provider {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.resource-vault__desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: var(--space-md);
+}
+
+.resource-vault__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.resource-vault__chip {
+  font-size: 0.6875rem;
+  padding: 0.15rem 0.5rem;
+  background: var(--color-cream-200);
+  border-radius: var(--radius-full);
+  color: var(--color-text-secondary);
+}
+
+.resource-vault__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.resource-vault__in-stack {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-forest-700);
+}
+
+.resource-vault__empty {
+  text-align: center;
+  padding: var(--space-3xl);
+  color: var(--color-text-muted);
+}
+
+.resource-vault__footer {
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-cream-300);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 480px) {
+  .resource-vault__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-vault__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .resource-vault__actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

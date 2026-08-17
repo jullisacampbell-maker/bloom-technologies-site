@@ -1,0 +1,208 @@
+.form-field {
+  margin-bottom: var(--space-lg);
+}
+
+.form-field__label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-primary);
+}
+
+.form-field__required {
+  color: var(--color-gold-600);
+}
+
+.form-field__hint {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.form-field__error {
+  font-size: 0.8125rem;
+  color: #b5453a;
+  margin-top: var(--space-xs);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--color-cream-300);
+  border-radius: var(--radius-md);
+  background: white;
+  color: var(--color-text-primary);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-forest-400);
+  box-shadow: 0 0 0 3px rgba(45, 90, 61, 0.12);
+}
+
+.form-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-field--error .form-input {
+  border-color: #b5453a;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235c5c5c' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.chip {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-cream-300);
+  background: white;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--color-forest-200);
+  background: var(--color-forest-50);
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--color-forest-500);
+  outline-offset: 2px;
+}
+
+.chip--selected {
+  background: var(--color-forest-700);
+  border-color: var(--color-forest-700);
+  color: white;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  cursor: pointer;
+}
+
+.toggle__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle__track {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background: var(--color-cream-300);
+  border-radius: var(--radius-full);
+  transition: background var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.toggle__track::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: transform var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.toggle__input:checked + .toggle__track {
+  background: var(--color-forest-600);
+}
+
+.toggle__input:checked + .toggle__track::after {
+  transform: translateX(20px);
+}
+
+.toggle__input:focus-visible + .toggle__track {
+  outline: 2px solid var(--color-forest-500);
+  outline-offset: 2px;
+}
+
+.toggle__label {
+  font-size: 0.9375rem;
+}
+
+.card-select {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-md);
+}
+
+.card-select__option {
+  padding: var(--space-lg);
+  border: 1.5px solid var(--color-cream-300);
+  border-radius: var(--radius-lg);
+  background: white;
+  text-align: left;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.card-select__option:hover {
+  border-color: var(--color-forest-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-select__option:focus-visible {
+  outline: 2px solid var(--color-forest-500);
+  outline-offset: 2px;
+}
+
+.card-select__option--selected {
+  border-color: var(--color-forest-600);
+  background: var(--color-forest-50);
+  box-shadow: var(--shadow-md);
+}
+
+.card-select__label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  margin-bottom: var(--space-xs);
+}
+
+.card-select__desc {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

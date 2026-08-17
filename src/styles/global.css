@@ -18,6 +18,14 @@
   --color-cream-300: #ebe4d8;
   --color-cream-400: #ddd4c4;
 
+  /* Gold accents */
+  --color-gold-100: #f5f0e4;
+  --color-gold-200: #e8dcc4;
+  --color-gold-400: #c4a96a;
+  --color-gold-500: #b8974a;
+  --color-gold-600: #9a7d3a;
+  --color-gold-700: #7d6530;
+
   /* Neutrals */
   --color-text-primary: #1a1a1a;
   --color-text-secondary: #5c5c5c;
@@ -259,7 +267,12 @@ h1, h2, h3, h4, h5, h6 {
   animation: fadeInUp 0.5s ease forwards;
 }
 
-/* Responsive */
+.btn--primary:focus-visible,
+.btn--secondary:focus-visible {
+  outline: 2px solid var(--color-forest-500);
+  outline-offset: 2px;
+}
+
 @media (max-width: 768px) {
   :root {
     --nav-height: 64px;

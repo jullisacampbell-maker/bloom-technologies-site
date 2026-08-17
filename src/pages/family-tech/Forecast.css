@@ -1,0 +1,192 @@
+.forecast {
+  padding: calc(var(--nav-height) + var(--space-2xl)) 0 var(--space-4xl);
+}
+
+.forecast__header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.forecast__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 400;
+  color: var(--color-forest-800);
+  margin: var(--space-lg) 0 var(--space-md);
+}
+
+.forecast__intro {
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.forecast__section {
+  margin-bottom: var(--space-2xl);
+}
+
+.forecast__section h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-forest-800);
+  margin-bottom: var(--space-lg);
+}
+
+.forecast__summary {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  background: white;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--color-forest-500);
+}
+
+.forecast__modules {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.forecast__rhythm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  background: white;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.forecast__rhythm-block {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+}
+
+.forecast__rhythm-time {
+  font-weight: 600;
+  color: var(--color-forest-700);
+  min-width: 5rem;
+}
+
+.forecast__rhythm-block--learning { background: var(--color-forest-50); }
+.forecast__rhythm-block--meals, .forecast__rhythm-block--meal { background: var(--color-gold-100); }
+.forecast__rhythm-block--movement { background: var(--color-cream-200); }
+
+.forecast__insights {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.forecast__insight {
+  background: linear-gradient(135deg, var(--color-forest-50), white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-forest-100);
+}
+
+.forecast__insight h4 {
+  font-size: 1rem;
+  color: var(--color-forest-800);
+  margin-bottom: var(--space-sm);
+}
+
+.forecast__insight p {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.forecast__next-steps {
+  padding-left: var(--space-lg);
+}
+
+.forecast__next-steps li {
+  margin-bottom: var(--space-md);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.forecast__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-cream-300);
+}
+
+.forecast__start-here {
+  background: linear-gradient(135deg, var(--color-forest-50), white);
+  border: 2px solid var(--color-forest-300);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.forecast__start-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-forest-700);
+}
+
+.forecast__start-here h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin: var(--space-sm) 0;
+  color: var(--color-forest-800);
+}
+
+.forecast__next-action {
+  font-weight: 500;
+  color: var(--color-forest-700);
+  margin-top: var(--space-md);
+}
+
+.forecast__why {
+  margin-top: calc(-1 * var(--space-md));
+  margin-bottom: var(--space-lg);
+  padding-left: var(--space-md);
+}
+
+.forecast__why-toggle {
+  font-size: 0.8125rem;
+  color: var(--color-forest-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.forecast__why-list {
+  margin-top: var(--space-sm);
+  padding-left: var(--space-lg);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.forecast__why-list li {
+  margin-bottom: var(--space-xs);
+}
+
+.forecast__setup-note {
+  text-align: center;
+  margin-top: var(--space-xl);
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+}
+
+.forecast__setup-note a {
+  color: var(--color-forest-700);
+  font-weight: 500;
+}
+
+.forecast__detail {
+  margin-top: var(--space-md);
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+}

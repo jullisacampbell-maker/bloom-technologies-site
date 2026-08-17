@@ -1,0 +1,118 @@
+.resource-inventory__intro {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.resource-inventory__vault-link {
+  display: inline-block;
+  margin-left: var(--space-sm);
+  color: var(--color-forest-700);
+  font-weight: 500;
+}
+
+.resource-inventory__matches {
+  background: var(--color-gold-50);
+  border: 1px solid var(--color-gold-200);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+  font-size: 0.875rem;
+}
+
+.resource-inventory__matches h4 {
+  font-size: 0.875rem;
+  margin-bottom: var(--space-sm);
+}
+
+.resource-inventory__blocks {
+  margin: var(--space-xl) 0;
+}
+
+.resource-inventory__hint {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.resource-inventory__block-list {
+  list-style: none;
+  padding: 0;
+}
+
+.resource-inventory__block-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  background: white;
+  border: 1px solid var(--color-cream-300);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-xs);
+  font-size: 0.9375rem;
+}
+
+.resource-inventory__block-actions button {
+  background: none;
+  border: 1px solid var(--color-cream-300);
+  border-radius: var(--radius-sm);
+  padding: 0.15rem 0.5rem;
+  margin-left: var(--space-xs);
+  cursor: pointer;
+}
+
+.resource-inventory__block-actions button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.resource-inventory__list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.resource-inventory__list-header h4 {
+  font-size: 1rem;
+}
+
+.resource-inventory__empty {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  padding: var(--space-lg);
+  background: var(--color-cream-100);
+  border-radius: var(--radius-md);
+}
+
+.resource-inventory__card {
+  background: white;
+  border: 1px solid var(--color-cream-300);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.resource-inventory__card summary {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: baseline;
+  margin-bottom: var(--space-md);
+}
+
+.resource-inventory__meta {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.resource-inventory__remove {
+  margin-top: var(--space-md);
+}
+
+.resource-config-form__hint {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
