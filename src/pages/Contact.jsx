@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Hero from '../components/Hero';
-import SocialLinks from '../components/SocialLinks';
 import SectionTitle from '../components/SectionTitle';
+import { companyContactEmail } from '../data/ecosystem';
+import { primaryProductCta } from '../data/navigation';
 import './Contact.css';
 
 export default function Contact() {
@@ -18,7 +19,6 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Integrate email service for contact form
     console.log('Contact form:', formData);
     setSubmitted(true);
   };
@@ -26,8 +26,9 @@ export default function Contact() {
   return (
     <div className="page-enter">
       <Hero
+        eyebrow="CONTACT"
         headline="Get in Touch"
-        subheadline="We'd love to hear from you. Whether you're a family, educator, creator, or potential partner — reach out."
+        subheadline="Questions about Bloom Technologies or the Bloom product ecosystem? We welcome families, educators, partners, and collaborators."
         compact
         showIllustration={false}
       />
@@ -45,16 +46,22 @@ export default function Contact() {
               <div className="contact__details">
                 <div className="contact__detail">
                   <span className="contact__detail-label">Email</span>
-                  {/* TODO: Replace with actual business email */}
-                  <a href="mailto:hello@bloomtechnologies.com" className="contact__detail-value">
-                    hello@bloomtechnologies.com
+                  <a href={`mailto:${companyContactEmail}`} className="contact__detail-value">
+                    {companyContactEmail}
                   </a>
                 </div>
               </div>
 
-              <div className="contact__social">
-                <span className="contact__social-label">Follow us</span>
-                <SocialLinks />
+              <div className="contact__product-link">
+                <span className="contact__detail-label">Customer platform</span>
+                <a
+                  href={primaryProductCta.href}
+                  className="contact__detail-value"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {primaryProductCta.label} →
+                </a>
               </div>
             </div>
 

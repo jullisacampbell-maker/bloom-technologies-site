@@ -1,22 +1,21 @@
+import { productUrls } from './ecosystem';
+
 export const navLinks = [
-  { label: 'Home', path: '/' },
   { label: 'Products', path: '/products' },
-  { label: 'About', path: '/about' },
+  { label: 'Vision', path: '/#vision' },
   { label: 'Founder', path: '/founder' },
-  { label: 'Blog', path: '/blog' },
   { label: 'Contact', path: '/contact' },
 ];
 
 export const footerLinks = [
   ...navLinks,
-  // TODO: Add Careers page
-  // TODO: Add Investor page
+  { label: 'About', path: '/about' },
 ];
 
-export const socialLinks = [
-  { label: 'Facebook', href: '#', icon: 'facebook' },
-  { label: 'LinkedIn', href: '#', icon: 'linkedin' },
-  { label: 'YouTube', href: '#', icon: 'youtube' },
-  { label: 'TikTok', href: '#', icon: 'tiktok' },
-  { label: 'Pinterest', href: '#', icon: 'pinterest' },
-];
+export const socialLinks = [];
+
+export const primaryProductCta = {
+  label: 'Explore Bloom Family Tech',
+  href: productUrls.familyTech,
+  external: true,
+};

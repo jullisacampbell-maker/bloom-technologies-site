@@ -85,7 +85,7 @@ export default function WaitlistForm() {
             <p className="waitlist__intro-text">
               We&apos;re building Bloom alongside real families—not assumptions. Join early
               to influence what we build, receive behind-the-scenes updates, and get first
-              access to Bloom HQ, Bloom Academy, and Bloom Buds before public launch.
+              access to Bloom Family Tech, Bloom Home, and Bloom Academy before public launch.
             </p>
           </div>
 

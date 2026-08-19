@@ -20,16 +20,15 @@ function ScrollToTop() {
         return;
       }
     }
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
   }, [pathname, hash]);
 
   return null;
 }
 
-export default function App() {
+function AppLayout() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
+    <>
       <Navbar />
       <main>
         <Routes>
@@ -42,6 +41,15 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <AppLayout />
     </BrowserRouter>
   );
 }

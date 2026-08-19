@@ -1,15 +1,45 @@
+import { Link } from 'react-router-dom';
 import './ProductCard.css';
 
+function ProductCta({ product }) {
+  if (!product.href) {
+    return (
+      <button type="button" className="product-card__cta btn btn--secondary btn--small" disabled>
+        {product.cta || 'Learn More'}
+      </button>
+    );
+  }
+
+  if (product.external) {
+    return (
+      <a
+        href={product.href}
+        className="product-card__cta btn btn--secondary btn--small"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {product.cta || 'Learn More →'}
+      </a>
+    );
+  }
+
+  return (
+    <Link to={product.href} className="product-card__cta btn btn--secondary btn--small">
+      {product.cta || 'Learn More →'}
+    </Link>
+  );
+}
+
 export default function ProductCard({ product, detailed = false }) {
-  const badgeClass = product.statusType === 'coming-soon'
-    ? 'badge badge--coming-soon'
-    : 'badge badge--founder';
+  const isComingSoon = product.status === 'coming-soon';
+  const badgeClass = isComingSoon ? 'badge badge--coming-soon' : 'badge badge--live';
+  const badgeLabel = isComingSoon ? 'Coming Soon' : 'Available';
 
   return (
     <article className={`product-card ${detailed ? 'product-card--detailed' : ''}`}>
       <div className="product-card__header">
         <span className="product-card__icon">{product.icon}</span>
-        <span className={badgeClass}>{product.status}</span>
+        <span className={badgeClass}>{badgeLabel}</span>
       </div>
 
       <h3 className="product-card__name">{product.name}</h3>
@@ -18,36 +48,22 @@ export default function ProductCard({ product, detailed = false }) {
       {detailed ? (
         <>
           <p className="product-card__description">{product.description}</p>
-          <div className="product-card__features">
-            <h4 className="product-card__features-title">Key Features</h4>
-            <ul className="product-card__features-list">
-              {product.features.map((feature) => (
-                <li key={feature}>{feature}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="product-card__roadmap">
-            <h4 className="product-card__roadmap-title">Roadmap</h4>
-            <ul className="product-card__roadmap-list">
-              {product.roadmap.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="product-card__screenshot">
-            <div className="product-card__screenshot-placeholder">
-              <span>{product.icon}</span>
-              <p>Screenshot Placeholder</p>
+          {product.highlights && (
+            <div className="product-card__features">
+              <h4 className="product-card__features-title">Includes</h4>
+              <ul className="product-card__features-list">
+                {product.highlights.map((feature) => (
+                  <li key={feature}>{feature}</li>
+                ))}
+              </ul>
             </div>
-          </div>
+          )}
+          <ProductCta product={product} />
         </>
       ) : (
         <>
-          <p className="product-card__description">{product.shortDescription}</p>
-          {/* TODO: Link to individual product marketing pages */}
-          <button className="product-card__cta btn btn--secondary btn--small">
-            Learn More
-          </button>
+          <p className="product-card__description">{product.description}</p>
+          <ProductCta product={product} />
         </>
       )}
     </article>

@@ -1,0 +1,18 @@
+.why-bloom__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  text-align: center;
+}
+
+.why-bloom__content p {
+  font-size: clamp(1.0625rem, 2vw, 1.1875rem);
+  line-height: 1.75;
+  color: rgba(253, 251, 247, 0.88);
+}
+
+.why-bloom__emphasis {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
+  color: var(--color-text-inverse) !important;
+}

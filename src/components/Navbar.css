@@ -38,15 +38,18 @@
   display: flex;
   align-items: center;
   gap: var(--space-xs);
+  flex: 1;
+  justify-content: center;
 }
 
 .navbar__link {
-  padding: var(--space-sm) var(--space-md);
-  font-size: 0.9375rem;
+  padding: var(--space-sm) var(--space-sm);
+  font-size: 0.875rem;
   font-weight: 400;
   color: var(--color-text-secondary);
   border-radius: var(--radius-sm);
   transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 
 .navbar__link:hover {
@@ -95,7 +98,27 @@
   display: none;
 }
 
-@media (max-width: 1024px) {
+.navbar__logo-text {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 769px) {
+  .navbar__links,
+  .navbar__cta {
+    display: flex;
+  }
+
+  .navbar__toggle {
+    display: none;
+  }
+
+  .navbar__mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
   .navbar__links,
   .navbar__cta {
     display: none;
