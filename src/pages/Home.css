@@ -4,14 +4,43 @@
   gap: var(--space-xl);
 }
 
-.home__social .social-links {
-  justify-content: center;
+.home__contact-card {
+  text-align: center;
+  background: var(--color-cream-50);
+  border: 1px solid var(--color-forest-100);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3xl);
+  box-shadow: var(--shadow-md);
 }
 
-@media (max-width: 968px) {
+.home__contact-actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-xl);
+}
+
+@media (max-width: 1100px) {
+  .home__products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
   .home__products {
     grid-template-columns: 1fr;
     max-width: 480px;
     margin: 0 auto;
+  }
+
+  .home__contact-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home__contact-actions .btn {
+    width: 100%;
+    max-width: 320px;
   }
 }

@@ -1,4 +1,9 @@
 :root {
+  /* Deep navy — technology / structure */
+  --color-navy-900: #1a2840;
+  --color-navy-800: #243352;
+  --color-navy-700: #2e3f5f;
+
   /* Forest green palette */
   --color-forest-900: #1a3328;
   --color-forest-800: #234032;
@@ -17,6 +22,14 @@
   --color-cream-200: #f5f0e8;
   --color-cream-300: #ebe4d8;
   --color-cream-400: #ddd4c4;
+
+  /* Gold accents */
+  --color-gold-100: #f5f0e4;
+  --color-gold-200: #e8dcc4;
+  --color-gold-400: #c4a96a;
+  --color-gold-500: #b8974a;
+  --color-gold-600: #9a7d3a;
+  --color-gold-700: #7d6530;
 
   /* Neutrals */
   --color-text-primary: #1a1a1a;
@@ -143,6 +156,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-inverse);
 }
 
+.section--navy {
+  background: linear-gradient(160deg, var(--color-navy-900) 0%, var(--color-navy-800) 100%);
+  color: var(--color-text-inverse);
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -219,6 +237,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-secondary);
 }
 
+.badge--live {
+  background: var(--color-forest-100);
+  color: var(--color-forest-700);
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -259,7 +282,12 @@ h1, h2, h3, h4, h5, h6 {
   animation: fadeInUp 0.5s ease forwards;
 }
 
-/* Responsive */
+.btn--primary:focus-visible,
+.btn--secondary:focus-visible {
+  outline: 2px solid var(--color-forest-500);
+  outline-offset: 2px;
+}
+
 @media (max-width: 768px) {
   :root {
     --nav-height: 64px;

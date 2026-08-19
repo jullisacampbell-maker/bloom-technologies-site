@@ -5,28 +5,15 @@
   align-items: center;
 }
 
-.founder-section__portrait-placeholder {
-  aspect-ratio: 3 / 4;
+.founder-section__portrait-img {
+  width: 100%;
   max-width: 360px;
-  background: linear-gradient(160deg, var(--color-cream-200) 0%, var(--color-forest-50) 100%);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-forest-100);
   box-shadow: var(--shadow-lg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-md);
-}
-
-.founder-section__portrait-icon {
-  font-size: 4rem;
-  opacity: 0.4;
-}
-
-.founder-section__portrait-placeholder p {
-  font-size: 0.8125rem;
-  color: var(--color-text-muted);
+  background: var(--color-cream-200);
 }
 
 .founder-section__story {
@@ -57,7 +44,7 @@
     justify-content: center;
   }
 
-  .founder-section__portrait-placeholder {
+  .founder-section__portrait-img {
     max-width: 280px;
   }
 

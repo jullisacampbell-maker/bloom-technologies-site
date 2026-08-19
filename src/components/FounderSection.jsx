@@ -4,40 +4,43 @@ import './FounderSection.css';
 
 export default function FounderSection({ compact = false }) {
   return (
-    <section className={`founder-section section ${compact ? '' : 'section--cream'}`}>
+    <section id="founder" className={`founder-section section ${compact ? '' : 'section--cream'}`}>
       <div className="container">
         <div className="founder-section__inner">
           <div className="founder-section__portrait">
-            <div className="founder-section__portrait-placeholder">
-              <span className="founder-section__portrait-icon">👤</span>
-              <p>Portrait Placeholder</p>
-            </div>
+            <img
+              src="/assets/founder-cartoon.png"
+              alt="Jullisa Campbell, Founder of Bloom Technologies"
+              className="founder-section__portrait-img"
+              width={360}
+              height={480}
+            />
           </div>
 
           <div className="founder-section__content">
             <SectionTitle
-              label="Leadership"
-              title="Meet the Founder"
+              label="Founder"
+              title="Jullisa Campbell"
+              subtitle="Founder, Bloom Technologies"
               align="left"
             />
 
             <div className="founder-section__story">
               <p>
-                Jullisa Campbell founded Bloom Technologies after years working in
-                healthcare SaaS implementation and customer success.
+                Bloom was created from the experience of managing real family life — homeschooling,
+                schedules, wellness, meals, household responsibilities, and the mental load of
+                keeping everything connected.
               </p>
               <p>
-                While helping large organizations implement complex technology, she
-                realized families deserved software designed with the same level of care.
-              </p>
-              <p>
-                Bloom Technologies was created to build technology around real family life.
+                Bloom Technologies builds technology from lived family workflow, not generic
+                productivity assumptions. The goal is intelligent tools that reduce decisions
+                and help households learn, plan, move, eat, and thrive together.
               </p>
             </div>
 
             {!compact && (
               <Link to="/founder" className="btn btn--secondary">
-                Read Full Story
+                Read Founder Story
               </Link>
             )}
           </div>

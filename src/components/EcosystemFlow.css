@@ -1,0 +1,103 @@
+.ecosystem-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.ecosystem-flow__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.ecosystem-flow__connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-sm) 0;
+  color: var(--color-forest-400);
+}
+
+.ecosystem-flow__line {
+  width: 1px;
+  height: 20px;
+  background: linear-gradient(180deg, var(--color-forest-200), var(--color-forest-300));
+}
+
+.ecosystem-flow__arrow {
+  font-size: 0.875rem;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+.ecosystem-flow__node {
+  width: 100%;
+  padding: var(--space-md) var(--space-xl);
+  text-align: center;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-forest-100);
+  background: var(--color-cream-50);
+  color: var(--color-forest-800);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base);
+}
+
+.ecosystem-flow__node--company {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 400;
+  background: linear-gradient(135deg, var(--color-navy-900) 0%, var(--color-navy-800) 100%);
+  color: var(--color-text-inverse);
+  border-color: transparent;
+}
+
+.ecosystem-flow__node--platform {
+  background: var(--color-forest-700);
+  color: var(--color-text-inverse);
+  border-color: transparent;
+}
+
+.ecosystem-flow__node--intelligence {
+  background: var(--color-cream-100);
+  border-color: var(--color-gold-200);
+  color: var(--color-navy-800);
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+}
+
+.ecosystem-flow__node--hub {
+  background: var(--color-forest-50);
+  border-color: var(--color-forest-200);
+  font-weight: 600;
+}
+
+.ecosystem-flow__node--modules {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  background: var(--color-cream-50);
+  border-style: dashed;
+  border-color: var(--color-forest-200);
+  font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  .ecosystem-flow__node {
+    padding: var(--space-md) var(--space-lg);
+    font-size: 0.875rem;
+  }
+
+  .ecosystem-flow__node--company {
+    font-size: 1rem;
+  }
+
+  .ecosystem-flow__node--modules {
+    font-size: 0.75rem;
+  }
+}

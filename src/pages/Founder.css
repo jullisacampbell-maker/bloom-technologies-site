@@ -5,28 +5,15 @@
   align-items: start;
 }
 
-.founder-page__portrait-placeholder {
+.founder-page__portrait-img {
+  width: 100%;
+  max-width: 400px;
   aspect-ratio: 3 / 4;
-  background: linear-gradient(160deg, var(--color-cream-200) 0%, var(--color-forest-50) 100%);
+  object-fit: cover;
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-forest-100);
   box-shadow: var(--shadow-lg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-md);
-  max-width: 400px;
-}
-
-.founder-page__portrait-placeholder span {
-  font-size: 5rem;
-  opacity: 0.3;
-}
-
-.founder-page__portrait-placeholder p {
-  font-size: 0.8125rem;
-  color: var(--color-text-muted);
+  background: var(--color-cream-200);
 }
 
 .founder-page__story {
@@ -81,6 +68,14 @@
   font-style: normal;
 }
 
+.founder-page__actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-2xl);
+}
+
 @media (max-width: 968px) {
   .founder-page__inner {
     grid-template-columns: 1fr;
@@ -91,7 +86,17 @@
     justify-content: center;
   }
 
-  .founder-page__portrait-placeholder {
+  .founder-page__portrait-img {
     max-width: 300px;
+  }
+
+  .founder-page__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .founder-page__actions .btn {
+    width: 100%;
+    max-width: 280px;
   }
 }

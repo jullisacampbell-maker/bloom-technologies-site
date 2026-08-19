@@ -45,6 +45,15 @@
   margin: 0 auto;
 }
 
+.hero__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-forest-600);
+  margin-bottom: var(--space-md);
+}
+
 .hero__headline {
   font-family: var(--font-serif);
   font-size: clamp(2.5rem, 5vw, 3.75rem);
