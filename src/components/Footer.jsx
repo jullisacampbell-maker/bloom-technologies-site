@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
-import { navLinks, primaryProductCta } from '../data/navigation';
+import { footerLinks, primaryProductCta } from '../data/navigation';
 import { companyContactEmail } from '../data/ecosystem';
+import { ownershipCopyright, ownershipMarks } from '../data/ownershipNotice';
 import './Footer.css';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="footer">
       <div className="container">
@@ -24,7 +23,7 @@ export default function Footer() {
           </div>
 
           <nav className="footer__nav" aria-label="Footer navigation">
-            {navLinks.map((link) => (
+            {footerLinks.map((link) => (
               <Link key={link.path} to={link.path} className="footer__nav-link">
                 {link.label}
               </Link>
@@ -45,12 +44,10 @@ export default function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <p className="footer__copyright">
-            © {currentYear} Bloom Technologies. All rights reserved.
-          </p>
-          <p className="footer__parent">
-            Bloom Family Tech · Bloom Home · Bloom Academy · Bloom OS
-          </p>
+          <div className="footer__ownership">
+            <p className="footer__copyright">{ownershipCopyright}</p>
+            <p className="footer__marks">{ownershipMarks}</p>
+          </div>
         </div>
       </div>
     </footer>

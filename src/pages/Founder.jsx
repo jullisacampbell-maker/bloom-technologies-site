@@ -19,13 +19,15 @@ export default function Founder() {
         <div className="container">
           <div className="founder-page__inner">
             <div className="founder-page__portrait">
-              <img
-                src="/assets/founder-cartoon.png"
-                alt="Jullisa Campbell, Founder of Bloom Technologies"
-                className="founder-page__portrait-img"
-                width={400}
-                height={533}
-              />
+              <div className="founder-page__portrait-frame">
+                <img
+                  src="/assets/founder-cartoon.png"
+                  alt="Jullisa Campbell, Founder of Bloom Technologies"
+                  className="founder-page__portrait-img"
+                  width={380}
+                  height={475}
+                />
+              </div>
             </div>
 
             <div className="founder-page__bio">
@@ -48,8 +50,8 @@ export default function Founder() {
                   lived family workflow rather than generic productivity assumptions.
                 </p>
                 <p>
-                  The company is credible, warm, and ambitious — building intelligent tools that
-                  help households learn, plan, move, eat, and thrive together.
+                  Bloom Technologies is building intelligent tools that help households learn, plan,
+                  move, eat, and thrive together.
                 </p>
               </div>
             </div>

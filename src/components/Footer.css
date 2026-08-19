@@ -78,22 +78,26 @@
 }
 
 .footer__bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding-top: var(--space-xl);
-  gap: var(--space-lg);
+}
+
+.footer__ownership {
+  max-width: 720px;
 }
 
 .footer__copyright {
   font-size: 0.8125rem;
   color: var(--color-forest-400);
+  line-height: 1.55;
+  margin: 0;
 }
 
-.footer__parent {
+.footer__marks {
   font-size: 0.75rem;
   color: var(--color-forest-400);
-  text-align: right;
+  line-height: 1.55;
+  margin: 0.25rem 0 0;
+  opacity: 0.92;
 }
 
 @media (max-width: 768px) {
@@ -103,12 +107,11 @@
   }
 
   .footer__bottom {
-    flex-direction: column;
     text-align: center;
   }
 
-  .footer__parent {
-    text-align: center;
+  .footer__ownership {
+    margin: 0 auto;
   }
 
   .footer__cta-block {

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import HeroProductPreview from './HeroProductPreview';
 import './Hero.css';
 
 function CtaButton({ cta }) {
@@ -56,12 +57,7 @@ export default function Hero({
 
         {showIllustration && !compact && (
           <div className="hero__illustration animate-fade-in-up animate-delay-3">
-            <div className="hero__illustration-placeholder">
-              <div className="hero__illustration-circle hero__illustration-circle--1" />
-              <div className="hero__illustration-circle hero__illustration-circle--2" />
-              <div className="hero__illustration-circle hero__illustration-circle--3" />
-              <div className="hero__illustration-icon">🌿</div>
-            </div>
+            <HeroProductPreview />
           </div>
         )}
       </div>

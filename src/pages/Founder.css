@@ -1,31 +1,43 @@
 .founder-page__inner {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: var(--space-4xl);
+  grid-template-columns: minmax(280px, 380px) 1fr;
+  gap: var(--space-2xl);
   align-items: start;
 }
 
-.founder-page__portrait-img {
+.founder-page__portrait-frame {
   width: 100%;
-  max-width: 400px;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  max-width: 380px;
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-forest-100);
   box-shadow: var(--shadow-lg);
   background: var(--color-cream-200);
+  overflow: hidden;
+}
+
+.founder-page__portrait-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right 24%;
 }
 
 .founder-page__story {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  gap: var(--space-md);
 }
 
 .founder-page__story p {
   font-size: 1.0625rem;
   color: var(--color-text-secondary);
   line-height: 1.8;
+}
+
+.founder-page__bio .section-title {
+  margin-bottom: var(--space-lg);
 }
 
 .founder-page__signature {
@@ -79,6 +91,7 @@
 @media (max-width: 968px) {
   .founder-page__inner {
     grid-template-columns: 1fr;
+    gap: var(--space-xl);
   }
 
   .founder-page__portrait {
@@ -86,8 +99,8 @@
     justify-content: center;
   }
 
-  .founder-page__portrait-img {
-    max-width: 300px;
+  .founder-page__portrait-frame {
+    max-width: 320px;
   }
 
   .founder-page__actions {
@@ -98,5 +111,15 @@
   .founder-page__actions .btn {
     width: 100%;
     max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-page__portrait-frame {
+    max-width: 260px;
+  }
+
+  .founder-page__portrait-img {
+    object-position: right 22%;
   }
 }

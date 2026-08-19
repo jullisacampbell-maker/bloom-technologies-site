@@ -8,13 +8,15 @@ export default function FounderSection({ compact = false }) {
       <div className="container">
         <div className="founder-section__inner">
           <div className="founder-section__portrait">
-            <img
-              src="/assets/founder-cartoon.png"
-              alt="Jullisa Campbell, Founder of Bloom Technologies"
-              className="founder-section__portrait-img"
-              width={360}
-              height={480}
-            />
+            <div className="founder-section__portrait-frame">
+              <img
+                src="/assets/founder-cartoon.png"
+                alt="Jullisa Campbell, Founder of Bloom Technologies"
+                className="founder-section__portrait-img"
+                width={2057}
+                height={764}
+              />
+            </div>
           </div>
 
           <div className="founder-section__content">
@@ -40,7 +42,7 @@ export default function FounderSection({ compact = false }) {
 
             {!compact && (
               <Link to="/founder" className="btn btn--secondary">
-                Read Founder Story
+                Read Founder Story →
               </Link>
             )}
           </div>

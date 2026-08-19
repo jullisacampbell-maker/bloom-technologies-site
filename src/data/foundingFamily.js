@@ -23,24 +23,24 @@ export const familyTypeOptions = [
 
 export const productInterestOptions = [
   {
-    value: 'bloom-hq',
-    label: 'Bloom HQ',
-    description: 'Home & Family Management',
+    value: 'bloom-family-tech',
+    label: 'Bloom Family Tech',
+    description: 'The family platform',
   },
   {
     value: 'bloom-academy',
     label: 'Bloom Academy',
-    description: 'Homeschool Planning',
+    description: 'Learning & homeschool organization',
   },
   {
-    value: 'bloom-buds',
-    label: 'Bloom Buds',
-    description: 'Interactive Learning for Kids',
+    value: 'bloom-home',
+    label: 'Bloom Home',
+    description: 'Daily family command center',
   },
   {
     value: 'everything',
     label: 'Everything',
-    description: 'All Bloom products',
+    description: 'The full Bloom ecosystem',
   },
 ];
 

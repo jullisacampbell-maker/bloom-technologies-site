@@ -1,26 +1,43 @@
 .founder-section__inner {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: var(--space-4xl);
+  grid-template-columns: minmax(0, 38%) minmax(0, 1fr);
+  gap: var(--space-3xl);
   align-items: center;
 }
 
-.founder-section__portrait-img {
+.founder-section__portrait {
+  min-width: 0;
+}
+
+.founder-section__portrait-frame {
   width: 100%;
-  max-width: 360px;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  max-height: 340px;
+  aspect-ratio: 4 / 3;
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-forest-100);
   box-shadow: var(--shadow-lg);
   background: var(--color-cream-200);
+  overflow: hidden;
+}
+
+.founder-section__portrait-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Source is a wide scene (2057×764); founder sits on the right ~78% / 32%. */
+  object-position: 78% 32%;
+}
+
+.founder-section__content {
+  min-width: 0;
 }
 
 .founder-section__story {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
-  margin-bottom: var(--space-2xl);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
 }
 
 .founder-section__story p {
@@ -30,12 +47,13 @@
 }
 
 .founder-section__content .section-title {
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-lg);
 }
 
 @media (max-width: 968px) {
   .founder-section__inner {
     grid-template-columns: 1fr;
+    gap: var(--space-xl);
     text-align: center;
   }
 
@@ -44,11 +62,19 @@
     justify-content: center;
   }
 
-  .founder-section__portrait-img {
-    max-width: 280px;
+  .founder-section__portrait-frame {
+    width: min(100%, 320px);
+    max-height: 260px;
   }
 
   .founder-section__content .section-title {
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-section__portrait-frame {
+    width: min(100%, 280px);
+    max-height: 220px;
   }
 }
